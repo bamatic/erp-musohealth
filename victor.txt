@@ -1,0 +1,32 @@
+MODIFIED
+api documents to be able to retrieve documents added to tikcets
+file: htdocs/api/class/api_document.class.php
+function: getDocumentsListByElement
+same API works now wit modulepart='ticket'
+
+api tickets added two API endpoints
+file :  htdocs/api/class/api_ticket.class.php
+
+endpoint GET /links
+function: links($id)
+
+endpoint: POST /links
+function: addLink($id,$url,$label)
+
+audio file preview on attachments tab
+created: htdocs/core/lib/audio.lib.php
+modified: htdocs/core/class/html.formfile.class.php (<audio> tag added)
+modifiend_function: list_of_documents
+
+TODO
+modify links list to add audio preview support
+
+ADD DEPARTEMENT TO ENTREPROT VIEW
+
+Entreprot::create --> product/stock/class/entreprot.class.php (add fk_departement support)
+if user has no parent user he can't transfert stock he can only consomme stock of his owns entreptos,
+even he cannot add stock, Correction but only up
+
+if user has parent he can do stock corection up and down on his entrepots,
+
+INJECTION scripts in main.inc.php top_htmlhead function 1350
