@@ -1696,9 +1696,13 @@ class Form
 				$sql .= " ON ug.fk_user = u.rowid";
 				$sql .= " WHERE ug.entity = ".$conf->entity;
 			} else {
+                $sql .= " LEFT JOIN ".MAIN_DB_PREFIX."usergroup_user as ug";
+                $sql .= " ON ug.fk_user = u.rowid";
 				$sql .= " WHERE u.entity IN (0,".$conf->entity.")";
 			}
+            $sql .= " AND ug.fk_usergroup=1";
 		}
+
 		if (!empty($user->socid)) $sql .= " AND u.fk_soc = ".$user->socid;
 		if (is_array($exclude) && $excludeUsers) $sql .= " AND u.rowid NOT IN (".$excludeUsers.")";
 		if ($includeUsers) $sql .= " AND u.rowid IN (".$includeUsers.")";

@@ -5,8 +5,8 @@ $input = $_FILES['data']['tmp_name']; //temporary name that PHP gave to the uplo
 //$output = $_FILES['whatsapp.wav']['name'].".wav"; //letting the client control the filename is a rather bad idea
 $returnMessage = "file too long";
 
-if ($size > 0 && $size<8*1024*1024) {
-    $target_url = 'https://muso:depistageY*1@connector.musohealth.ml/erp-send/tel/' . $_POST['tel'];
+if ($size > 0 && $size<5*1024*1024) {
+    $target_url = 'https://muso:depistageY*1@connector.musohealth.ml/erp-send/tel/' . $_POST['tel'] . '/ticket/' . $_POST['ticket'];
 
     $post = array(
         'file' => curl_file_create($input)

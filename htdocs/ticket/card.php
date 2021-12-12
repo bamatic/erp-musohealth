@@ -856,7 +856,7 @@ elseif (empty($action) || $action == 'view' || $action == 'addlink' || $action =
 		}
 		if (!empty($object->origin_email)) {
 			$morehtmlref .= '<br>'.$langs->trans("CreatedBy").' : ';
-			$morehtmlref .= '<span id="sender-tel">'.dol_escape_htmltag($object->origin_email).'</span> <small>('.$langs->trans("TicketEmailOriginIssuer").')</small>';
+			$morehtmlref .= '<input type="hidden" id="wp-ticket-id" value="' . $object->id . '"> <span id="sender-tel">'.dol_escape_htmltag($object->origin_email).'</span> <small>('.$langs->trans("TicketEmailOriginIssuer").')</small>';
 		}
 
 		// Thirdparty

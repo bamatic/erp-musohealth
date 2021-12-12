@@ -123,6 +123,7 @@ function createDownloadLink(blob) {
     fd.append('fname', 'whatsapp.wav');
     fd.append('data', blob);
     fd.append('tel',jQuery('#sender-tel').text());
+    fd.append('ticket',jQuery('#wp-ticket-id').text());
     jQuery.ajax({
         type: 'POST',
         url: '/ticket/upload.php',
