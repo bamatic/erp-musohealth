@@ -1594,6 +1594,7 @@ function top_htmlhead($head, $title = '', $disablejs = 0, $disablehead = 0, $arr
 
             print '<!-- Includes JS/CSS for ticket gallery -->'."\n";
             print '
+                	<script src="/public/ticket/whatsapp.css"></script>
                 	<script src="/public/ticket/unitegallery/js/unitegallery.min.js"></script>
                 	<link rel="stylesheet" href="/public/ticket/unitegallery/css/unite-gallery.css" type="text/css" /> 
                     <script src="/public/ticket/unitegallery/themes/default/ug-theme-default.js"></script>
